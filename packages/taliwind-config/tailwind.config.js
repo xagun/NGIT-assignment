@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-const sharedConfig = require("tailwind-config/tailwind.config.js");
-
 module.exports = {
-  ...sharedConfig,
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "../../packages/assignment-ui/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
   theme: {
@@ -76,5 +74,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
