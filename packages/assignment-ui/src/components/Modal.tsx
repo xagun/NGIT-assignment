@@ -11,13 +11,13 @@ interface UserData {
    
 
 interface ButtonProps {
-  children: ReactNode;
+//   children: ReactNode;
   className?: string;
   appName: string;
   userData:UserData[]
 }
 
-export const Modal = ({ children, className, appName, userData }: ButtonProps) => {
+export const Modal = ({  className, appName, userData }: ButtonProps) => {
   return (
     // <button
     //   className={className || ''}
