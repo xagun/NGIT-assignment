@@ -11,13 +11,10 @@ interface UserData {
    
 
 interface ButtonProps {
-//   children: ReactNode;
-  className?: string;
-  appName: string;
   userData:UserData[]
 }
 
-export const Modal = ({  className, appName, userData }: ButtonProps) => {
+export const Modal = ({  userData }: ButtonProps) => {
   return (
     // <button
     //   className={className || ''}
@@ -27,10 +24,11 @@ export const Modal = ({  className, appName, userData }: ButtonProps) => {
     // </button>
     <>
     {userData.map((ud)=>(
-        <p>
+        <p className="p-4 bg-blue-600">
 {ud.name}
         </p>
     ))}
+    
 
     </>
   );

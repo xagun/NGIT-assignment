@@ -1,18 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const sharedConfig = require("tailwind-config/tailwind.config.js");
+
 module.exports = {
+  ...sharedConfig,
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "../../packages/assignment-ui/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
-    colors: {
-      myColor: "#ef89b1",
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -77,5 +71,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
