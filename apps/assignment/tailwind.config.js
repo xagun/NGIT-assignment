@@ -9,6 +9,7 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "../../packages/assignment-ui/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   prefix: "",
   theme: {
