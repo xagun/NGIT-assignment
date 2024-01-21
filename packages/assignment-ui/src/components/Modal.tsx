@@ -96,17 +96,23 @@ export const Modal: React.FC<ModalProps> = ({ children }) => {
   <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
     <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
   
-      <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-[30px_30px_90px_10px_rgba(0,0,0,0.3)] transition-all sm:my-8 sm:w-[400px] sm:max-w-lg">
+      <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-[30px_30px_90px_10px_rgba(0,0,0,0.3)] transition-all sm:my-8 sm:w-[360px] sm:max-w-lg">
         <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
           <div className="">
-            <h1>24 Birthdays Today</h1>
+          <h1 className="text-center text-xl font-bold">
+  24 Birthdays Today
+</h1>
 
     {children}
 
 
     
     <div className="flex justify-center">
-    <button className='p-2 bg-yellow-400'>View All</button>
+    <button
+  className="bg-gradient-to-r from-pink-400 to-purple-400 text-white px-4 py-2 my-4 rounded text-white w-[250px] h-[50px]"  
+>
+  View All
+</button>
 </div>
           </div>
         </div>

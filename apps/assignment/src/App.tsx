@@ -97,7 +97,7 @@ const App: React.FC = () => {
           const result = await response.json();
         setIsLoading(false);
 
-          setData(result.users.slice(0,6));
+          setData(result.users.slice(0,5));
         }, 3000); // 5000 milliseconds = 5 seconds
       } catch (error) {
         setError('Error fetching data');
@@ -115,40 +115,41 @@ const App: React.FC = () => {
             <Modal>
       <>
       
-      {isLoading && 
+      {isLoading ?
       
     <>
  
           {
-            Array(6)
+            Array(5)
             .fill(0)
             .map((_, i) => (
-              <div key={i} className="flex items-center space-x-4">
+              <div key={i} className="flex items-center space-x-4 m-4">
                 <Skeleton className="h-12 w-12 rounded-full" />
                 <div className="space-y-2">
-                  <Skeleton className="h-4 w-[250px]" /> 
-                  <Skeleton className="h-4 w-[200px]" />
+                  <Skeleton className="h-4 w-[200px]" /> 
+                  <Skeleton className="h-4 w-[100px]" />
                 </div>
               </div>
             ))
           }
     </>
+    :<ul>
+    {data.map((item: { id: string; firstName: string; lastName: string; age:number;image:string}) => (
+       <div key = {item.id} className="flex items-center space-x-4 m-4">
+       <img src = {item.image} className="h-12 w-12 rounded-full" />
+       <div className="space-y-2">
+         <p className="h-4 w-[200px]">{item.firstName} {" "} {item.lastName} </p>
+         <p className="h-4 w-[100px]">{item.age} years</p>
+       </div>
+     </div>
+         
+          ))}
+    </ul>
       }
 
 
 
-<ul>
-{data.map((item: { id: string; firstName: string; lastName: string; age:number;image:string}) => (
-   <div key = {item.id} className="flex items-center space-x-4 m-3">
-   <img src = {item.image} className="h-12 w-12 rounded-full" />
-   <div className="space-y-2">
-     <p className="h-4 w-[200px]">{item.firstName} {" "} {item.lastName} </p>
-     <p className="h-4 w-[200px]">{item.age}</p>
-   </div>
- </div>
-     
-      ))}
-</ul>
+
 </>
       </Modal>
 
