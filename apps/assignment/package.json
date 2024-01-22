@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@tanstack/react-query": "^5.17.19",
     "assignment-ui": "*",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -32,8 +33,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.33",
+    "tailwind-config": "*",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.2.2",
-    "tailwind-config":"*"
+    "typescript": "^5.2.2"
   }
 }
